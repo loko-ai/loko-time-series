@@ -1,5 +1,8 @@
 {
   "main": {
+    "volumes": [
+      "/home/roberta/loko/projects/loko-time-series/repo:/plugin/repo"
+    ],
     "gui": {
       "name": "Time series GUI"
     }
