@@ -5,10 +5,10 @@ import numpy as np
 import pandas as pd
 from sktime.forecasting.compose import TransformedTargetForecaster
 
-from ds4biz_time_series.model.transformer_model import TimeSeriesTransformer
+from loko_time_series.model.transformer_model import TimeSeriesTransformer
 from sktime.forecasting.base import ForecastingHorizon
 
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.logger_utils import logger
 from sktime.performance_metrics.forecasting import mean_squared_error, mean_absolute_error, MeanAbsolutePercentageError
 
 

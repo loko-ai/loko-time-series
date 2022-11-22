@@ -1,9 +1,9 @@
 from abc import abstractmethod
 from typing import List
 
-from ds4biz_time_series.utils.factory_utils import get_factory
-from ds4biz_time_series.utils.form_utils import guess_convert, get_default_doc
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.factory_utils import get_factory
+from loko_time_series.utils.form_utils import guess_convert, get_default_doc
+from loko_time_series.utils.logger_utils import logger
 
 
 class Form:

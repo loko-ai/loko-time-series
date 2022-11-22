@@ -1,8 +1,7 @@
-autots
 ds4biz-commons
 loko-extensions
 pandas
-sanic
+sanic == 22.6.2
 sanic_cors
 sanic_openapi
 sktime

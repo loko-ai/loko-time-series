@@ -1,7 +1,7 @@
 import pandas as pd
 
-from ds4biz_time_series.utils.core_utils import to_dataframe
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.core_utils import to_dataframe
+from loko_time_series.utils.logger_utils import logger
 
 
 def preprocessing_data(data, datetime_feature, datetime_frequency, task="forecasting", get_only_X = False):

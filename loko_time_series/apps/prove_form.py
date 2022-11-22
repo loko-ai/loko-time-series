@@ -3,9 +3,9 @@ import re
 import sys
 from typing import List
 
-from ds4biz_time_series.business.form_model import ModelForm
-from ds4biz_time_series.model.doc_form_models import DocForm
-from ds4biz_time_series.utils.factory_utils import get_factory
+from loko_time_series.business.form_model import ModelForm
+from loko_time_series.model.doc_form_models import DocForm
+from loko_time_series.utils.factory_utils import get_factory
 
 
 
@@ -96,7 +96,7 @@ from sktime.forecasting.arima import ARIMA
 # print(Rocket.__doc__)
 
 # el = get_factory("sktime.transformations.panel.rocket.Rocket")
-from ds4biz_time_series.utils.form_utils import get_default_doc
+from loko_time_series.utils.form_utils import get_default_doc
 
 # kl = dict(__klass__="sktime.transformations.panel.rocket.Rocket")
 el = dict(__klass__="sklearn.ensemble.RandomForestClassifier")

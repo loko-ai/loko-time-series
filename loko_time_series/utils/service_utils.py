@@ -6,15 +6,15 @@ from urllib.parse import unquote
 
 from sanic.exceptions import SanicException
 
-from ds4biz_time_series.business.training import training_pipeline
-from ds4biz_time_series.config.AppConfig import REPO_PATH, PREDICTOR_EVALUATE_FOLDER, EVALUATE_FILES_EXTENSION, \
+from loko_time_series.business.training import training_pipeline
+from loko_time_series.config.AppConfig import REPO_PATH, PREDICTOR_EVALUATE_FOLDER, EVALUATE_FILES_EXTENSION, \
     ORCHESTRATOR
-from ds4biz_time_series.dao.fs_dao import FileSystemDAO
-from ds4biz_time_series.utils.core_utils import load_pipeline
-from ds4biz_time_series.utils.data_utils import preprocessing_data
-from ds4biz_time_series.utils.files_utils import save_eval_file
-from ds4biz_time_series.utils.logger_utils import logger
-from ds4biz_time_series.utils.serialization_utils import deserialize, serialize
+from loko_time_series.dao.fs_dao import FileSystemDAO
+from loko_time_series.utils.core_utils import load_pipeline
+from loko_time_series.utils.data_utils import preprocessing_data
+from loko_time_series.utils.files_utils import save_eval_file
+from loko_time_series.utils.logger_utils import logger
+from loko_time_series.utils.serialization_utils import deserialize, serialize
 
 repo_path = Path(REPO_PATH)
 

@@ -3,7 +3,7 @@ from pathlib import Path
 
 from ds4biz_commons.utils.config_utils import EnvInit
 
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.logger_utils import logger
 
 env=EnvInit()
 

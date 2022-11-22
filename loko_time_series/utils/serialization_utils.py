@@ -1,7 +1,7 @@
 import json
 import os
 
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.logger_utils import logger
 
 
 def serialize(path, obj):

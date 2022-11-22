@@ -2,8 +2,8 @@ import ast
 import re
 from typing import List
 
-from ds4biz_time_series.model.doc_form_models import DocForm
-from ds4biz_time_series.utils.factory_utils import get_factory
+from loko_time_series.model.doc_form_models import DocForm
+from loko_time_series.utils.factory_utils import get_factory
 
 def guess_convert(s):
     if s is None:

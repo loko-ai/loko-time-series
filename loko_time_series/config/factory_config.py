@@ -1,7 +1,7 @@
 from ds4biz_commons.business.factories import BaseFactory
 from sktime.transformations.compose import TransformerPipeline
 from ds4biz_commons.utils.submodules import ClassByNameLoader
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.utils.logger_utils import logger
 # from sktime.forecasting.
 
 logger.debug("starting base factory ....")

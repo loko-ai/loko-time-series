@@ -1,7 +1,7 @@
 import shutil
 from pathlib import Path
 
-from ds4biz_time_series.config.AppConfig import REPO_PATH
+from loko_time_series.config.AppConfig import REPO_PATH
 
 repo = Path(REPO_PATH)
 

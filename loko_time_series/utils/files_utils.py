@@ -2,8 +2,8 @@ import json
 
 import requests
 
-from ds4biz_time_series.config.AppConfig import EVALUATE_FILES_EXTENSION, PREDICTOR_EVALUATE_FOLDER, ORCHESTRATOR
-from ds4biz_time_series.utils.logger_utils import logger
+from loko_time_series.config.AppConfig import EVALUATE_FILES_EXTENSION, PREDICTOR_EVALUATE_FOLDER, ORCHESTRATOR
+from loko_time_series.utils.logger_utils import logger
 
 
 def save_eval_file(eval_fname, data):

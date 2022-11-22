@@ -17,11 +17,11 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble._gradient_boosting import csr_matrix
 
-from ds4biz_time_series.business.ts_pipeline import TSPipeline
-from ds4biz_time_series.utils.factory_utils import get_factory
-from ds4biz_time_series.utils.history_utils import History
-from ds4biz_time_series.utils.logger_utils import logger
-from ds4biz_time_series.utils.serialization_utils import deserialize
+from loko_time_series.business.ts_pipeline import TSPipeline
+from loko_time_series.utils.factory_utils import get_factory
+from loko_time_series.utils.history_utils import History
+from loko_time_series.utils.logger_utils import logger
+from loko_time_series.utils.serialization_utils import deserialize
 
 
 class Status:

@@ -1,4 +1,4 @@
-from ds4biz_time_series.model.timeseries_model import TimeSeriesPredictor
+from loko_time_series.model.timeseries_model import TimeSeriesPredictor
 from sktime.datasets import load_longley
 
 

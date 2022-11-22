@@ -6,16 +6,16 @@ from sanic.exceptions import SanicException
 import numpy as np
 import pandas as pd
 
-from ds4biz_time_series.business.ts_pipeline import TSPipeline
-from ds4biz_time_series.config.AppConfig import REPO_PATH
+from loko_time_series.business.ts_pipeline import TSPipeline
+from loko_time_series.config.AppConfig import REPO_PATH
 from sktime.forecasting.model_selection import temporal_train_test_split
 # from ds4biz_predictor_core.utils.ml_utils import save_pipeline
 
-from ds4biz_time_series.dao.fs_dao import JSONFSDAO
-from ds4biz_time_series.utils.core_utils import save_pipeline, to_dataframe
-from ds4biz_time_series.utils.factory_utils import get_factory
-from ds4biz_time_series.utils.logger_utils import logger
-from ds4biz_time_series.utils.serialization_utils import serialize
+from loko_time_series.dao.fs_dao import JSONFSDAO
+from loko_time_series.utils.core_utils import save_pipeline, to_dataframe
+from loko_time_series.utils.factory_utils import get_factory
+from loko_time_series.utils.logger_utils import logger
+from loko_time_series.utils.serialization_utils import serialize
 
 repo_path = Path(REPO_PATH)
 

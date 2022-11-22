@@ -15,24 +15,24 @@ from sanic.response import raw
 # app = Sanic("res")
 # swagger_blueprint.url_prefix = "/api"
 # app.blueprint(swagger_blueprint)
-from ds4biz_time_series.business.form_model import get_form
-from ds4biz_time_series.config.AppConfig import REPO_PATH
-from ds4biz_time_series.dao.fs_dao import JSONFSDAO
-from ds4biz_time_series.model.services_model import FitServiceArgs, PredictServiceArgs, EvaluateServiceArgs
-from ds4biz_time_series.utils.core_utils import load_pipeline
-from ds4biz_time_series.utils.data_utils import preprocessing_data
-from ds4biz_time_series.utils.factory_utils import get_factory
-from ds4biz_time_series.utils.logger_utils import logger
-from ds4biz_time_series.utils.ppom_utils import get_pom_major_minor
+from loko_time_series.business.form_model import get_form
+from loko_time_series.config.AppConfig import REPO_PATH
+from loko_time_series.dao.fs_dao import JSONFSDAO
+from loko_time_series.model.services_model import FitServiceArgs, PredictServiceArgs, EvaluateServiceArgs
+from loko_time_series.utils.core_utils import load_pipeline
+from loko_time_series.utils.data_utils import preprocessing_data
+from loko_time_series.utils.factory_utils import get_factory
+from loko_time_series.utils.logger_utils import logger
+from loko_time_series.utils.ppom_utils import get_pom_major_minor
 from sanic.exceptions import SanicException, NotFound
 
 import sanic
 
-from ds4biz_time_series.utils.service_utils import check_predictor_existence, load_params, check_existence, train_model, \
+from loko_time_series.utils.service_utils import check_predictor_existence, load_params, check_existence, train_model, \
     get_prediction, get_model_evaluation
-from ds4biz_time_series.utils.serialization_utils import serialize, deserialize
-from ds4biz_time_series.utils.service_utils import get_all
-from ds4biz_time_series.utils.zip_utils import make_zipfile, import_zipfile
+from loko_time_series.utils.serialization_utils import serialize, deserialize
+from loko_time_series.utils.service_utils import get_all
+from loko_time_series.utils.zip_utils import make_zipfile, import_zipfile
 
 from loko_extensions.business.decorators import extract_value_args
 
