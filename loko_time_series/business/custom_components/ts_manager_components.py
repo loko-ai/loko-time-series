@@ -1,21 +1,24 @@
 from loko_extensions.model.components import Component, Input, Output, save_extensions, Select, Arg, Dynamic, \
     AsyncSelect
 
-create_predictor_service = ""
+create_predictor_service = "loko-services/create_predictor"
 
-delete_predictor_service = ""
-info_predictor_service = "loko-services/info"
+delete_predictor_service = "loko-services/delete_objs"
+info_predictor_service = "loko-services/info_obj"
 
 ################################# ARGS ##################################
 
 
-predictor_list_service = "http://localhost:9999/routes/ds4biz-time-series/predictors"
-transformer_list_service = "http://localhost:9999/routes/ds4biz-time-series/transformers"
-model_list_service = "http://localhost:9999/routes/ds4biz-time-series/models"
+predictor_list_service = "http://localhost:9999/routes/loko-time-series/predictors"
+transformer_list_service = "http://localhost:9999/routes/loko-time-series/transformers"
+model_list_service = "http://localhost:9999/routes/loko-time-series/models"
 ############################ create args #############################
 
 create_group = "Create Parameters"
-
+predictor = Arg(name="predictor_name", label="Predictor", helper="Choose the name you want to use for your predictor",
+                type="text", group=create_group)
+description = Arg(name="description", label="Description", helper="Add a description for your predictor, if you want",
+                type="area", group=create_group)
 # predictor = Arg(name="predictor_name", label="Predictor", helper="Choose the name you want to use for your predictor",
 #                 type="text")
 
@@ -38,7 +41,8 @@ model_def = Dynamic(name="model_def", label="Model", description="Define the str
 
 # task = AsyncSelect(name='task', label='Task', url='http://localhost:9999/routes/loko_prescriptor/saro')
 
-create_args = [transformer, transformer_name, transformer_def, model, model_name, model_def]
+create_args = [predictor, description, transformer, transformer_name, transformer_def, model, model_name, model_def]
+# create_args = [transformer, transformer_name, transformer_def, model, model_name, model_def]
 
 ############################ delete args #############################
 
@@ -96,19 +100,3 @@ ts_manager_component = Component(name="TimeSeries Manager", description="Compone
 
 
 
-""" tf_i
-{
-  "__klass__": "sktime.transformations.compose.TransformerPipeline",
-  "steps": [
-    {
-      "__klass__": "sktime.transformations.series.detrend.Deseasonalizer",
-      "model": "multiplicative",
-      "sp": 12
-    },
-    {
-      "__klass__": "sktime.transformations.series.detrend.Deseasonalizer",
-      "model": "additive",
-      "sp": 3
-    }
-  ]
-}"""
