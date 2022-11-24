@@ -1,17 +1,333 @@
 {
-  "name": "ds4biz-time-series",
-  "id": "ds4biz-time-series",
+  "name": "loko-time-series",
+  "id": "loko-time-series",
   "description": "",
   "created_on": "14/09/2022, 12:18:07",
-  "last_modify": "18/10/2022, 20:00:31",
+  "last_modify": "24/11/2022, 13:45:19",
   "graphs": {
     "Manage TS": {
-      "nodes": [
-        {
-          "id": "d5427381-bce8-4292-ad92-247475a9465f",
+        "nodes": [
+         {
+          "id": "c61de535-b6fc-4142-b4e7-7a4c0d51bfea",
           "position": {
-            "x": 694.9915351044307,
-            "y": 250.96800705814522
+            "x": 597.9983800967688,
+            "y": 165.1420114963827
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 239,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "Create Pred \"example\"",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 597.9983800967688,
+            "y": 165.1420114963827
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "661361df-2019-4b29-a1da-5d30234f08b4",
+          "position": {
+            "x": 373.5047164619619,
+            "y": 271.5073814522968
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 281,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "Del Pred \"example\"",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 373.5047164619619,
+            "y": 271.5073814522968
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "af6e12fa-6652-4e0d-8545-7a5a1725a89d",
+          "position": {
+            "x": 613.5956879319826,
+            "y": 352.578686122459
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 214,
+          "height": 104,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "comment": "",
+                "alias": "Info Pred \"example\"",
+                "debug": false,
+                "type": "String",
+                "value": "Hello world!"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 613.5956879319826,
+            "y": 352.578686122459
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "6497267d-f7ed-45c1-940f-12894b077f33",
+          "position": {
+            "x": 333.5047164619619,
+            "y": 125.14201149638271
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 932.3964958214938,
+          "height": 371.4366746260763,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Gestione TimeSeries",
+            "fill": "#90BE6D",
+            "height": 371.4366746260763,
+            "width": 932.3964958214938
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "__class__": "Node"
+        },
+        {
+          "id": "84ed2b95-11f2-4480-a12b-be844ec598f1",
+          "position": {
+            "x": 980.8511127960696,
+            "y": 268.5498206919062
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -19,8 +335,8 @@
           "targetPosition": "left",
           "width": 150,
           "height": 56,
-          "selected": null,
-          "dragging": null,
+          "selected": false,
+          "dragging": false,
           "data": {
             "name": "TimeSeries Manager",
             "events": null,
@@ -29,20 +345,20 @@
               {
                 "id": "create",
                 "label": "create_predictor",
-                "service": "",
-                "to": "create_predictor"
+                "service": "loko-services/create_predictor",
+                "to": "create"
               },
               {
                 "id": "delete",
-                "label": "delete_predictor",
-                "service": "",
-                "to": "delete_predictor"
+                "label": "delete_objects",
+                "service": "loko-services/delete_objs",
+                "to": "delete"
               },
               {
                 "id": "info",
-                "label": "info_predictor",
-                "service": "loko-services/info",
-                "to": "info_predictor"
+                "label": "info_object",
+                "service": "loko-services/info_obj",
+                "to": "info"
               }
             ],
             "outputs": [
@@ -52,11 +368,11 @@
               },
               {
                 "id": "delete",
-                "label": "delete_predictor"
+                "label": "delete_objects"
               },
               {
                 "id": "info",
-                "label": "info_predictor"
+                "label": "info_object"
               }
             ],
             "configured": true,
@@ -82,6 +398,26 @@
                   "divider": true
                 },
                 {
+                  "name": "predictor_name",
+                  "type": "text",
+                  "label": "Predictor",
+                  "helper": "Choose the name you want to use for your predictor",
+                  "group": "Create Parameters",
+                  "value": null,
+                  "description": "",
+                  "validation": null
+                },
+                {
+                  "name": "description",
+                  "type": "area",
+                  "label": "Description",
+                  "helper": "Add a description for your predictor, if you want",
+                  "group": "Create Parameters",
+                  "value": null,
+                  "description": "",
+                  "validation": null
+                },
+                {
                   "name": "existing_transf",
                   "type": "boolean",
                   "label": "Use existing transformer",
@@ -92,7 +428,7 @@
                   "validation": null
                 },
                 {
-                  "name": "transformer_name",
+                  "name": "transformer_id",
                   "type": "dynamic",
                   "label": "Transformer",
                   "helper": "",
@@ -107,7 +443,7 @@
                   "url": "http://localhost:9999/routes/ds4biz-time-series/transformers"
                 },
                 {
-                  "name": "transformer_def",
+                  "name": "transformer_bp",
                   "type": "dynamic",
                   "label": "Transformer",
                   "helper": "",
@@ -132,7 +468,7 @@
                   "validation": null
                 },
                 {
-                  "name": "model_name",
+                  "name": "model_id",
                   "type": "dynamic",
                   "label": "Model",
                   "helper": "",
@@ -147,7 +483,7 @@
                   "url": "http://localhost:9999/routes/ds4biz-time-series/models"
                 },
                 {
-                  "name": "model_def",
+                  "name": "model_bp",
                   "type": "dynamic",
                   "label": "Model",
                   "helper": "",
@@ -210,7 +546,7 @@
                   ]
                 },
                 {
-                  "name": "obj_name",
+                  "name": "info_obj_name",
                   "type": "dynamic",
                   "label": "Predictor",
                   "helper": "",
@@ -225,7 +561,7 @@
                   "url": "http://localhost:9999/routes/ds4biz-time-series/predictors"
                 },
                 {
-                  "name": "obj_name",
+                  "name": "info_obj_name",
                   "type": "dynamic",
                   "label": "Model",
                   "helper": "",
@@ -240,7 +576,7 @@
                   "url": "http://localhost:9999/routes/ds4biz-time-series/models"
                 },
                 {
-                  "name": "obj_name",
+                  "name": "info_obj_name",
                   "type": "dynamic",
                   "label": "Transformer",
                   "helper": "",
@@ -258,17 +594,77 @@
               "click": null,
               "icon": "RiFileSettingsFill",
               "values": {
-                "existing_transf": "true",
-                "existing_model": "false"
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "predictor_name": "example",
+                "description": "Description example",
+                "existing_transf": true,
+                "existing_model": false,
+                "info_obj": "Predictor",
+                "model_bp": "{\"__klass__\": \"sktime.forecasting.naive.NaiveForecaster\", \"strategy\": \"mean\"}",
+                "del_transformer": "",
+                "info_obj_name": "",
+                "del_model": "",
+                "del_predictor": "",
+                "transformer_id": ""
               }
-            }
+            },
+            "locked": null
           },
           "selectable": true,
           "draggable": true,
+          "positionAbsolute": {
+            "x": 980.8511127960696,
+            "y": 268.5498206919062
+          },
           "__class__": "Node"
         }
       ],
-      "edges": [],
+      "edges": [
+        {
+          "id": "reactflow__edge-c61de535-b6fc-4142-b4e7-7a4c0d51bfeaoutput-84ed2b95-11f2-4480-a12b-be844ec598f1create",
+          "source": "c61de535-b6fc-4142-b4e7-7a4c0d51bfea",
+          "sourceHandle": "output",
+          "target": "84ed2b95-11f2-4480-a12b-be844ec598f1",
+          "targetHandle": "create",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-661361df-2019-4b29-a1da-5d30234f08b4output-84ed2b95-11f2-4480-a12b-be844ec598f1delete",
+          "source": "661361df-2019-4b29-a1da-5d30234f08b4",
+          "sourceHandle": "output",
+          "target": "84ed2b95-11f2-4480-a12b-be844ec598f1",
+          "targetHandle": "delete",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-af6e12fa-6652-4e0d-8545-7a5a1725a89doutput-84ed2b95-11f2-4480-a12b-be844ec598f1info",
+          "source": "af6e12fa-6652-4e0d-8545-7a5a1725a89d",
+          "sourceHandle": "output",
+          "target": "84ed2b95-11f2-4480-a12b-be844ec598f1",
+          "targetHandle": "info",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        }
+      ],
       "__class__": "Graph"
     },
     "BrandonTest": {
@@ -794,7 +1190,7 @@
                 "alias": "Trainining Data",
                 "debug": false,
                 "type": "Object",
-                "value": "\n\n{\"data\":[{\"Date_Time\": \"01/03/2010  08:20:40\" },\n                {\"Date_Time\": \"01/10/2010  08:20:40\"},\n                {\"Date_Time\": \"01/17/2010  08:20:40\"},\n                {\"Date_Time\": \"01/24/2010  08:20:40\"},\n                {\"Date_Time\": \"01/31/2010  08:20:40\"},\n                {\"Date_Time\": \"02/07/2010  08:20:40\"},\n                {\"Date_Time\": \"02/14/2010  08:20:40\"},\n                {\"Date_Time\": \"02/21/2010  08:20:40\"},\n                {\"Date_Time\": \"02/28/2010  08:20:40\"},\n                {\"Date_Time\": \"03/07/2010  08:20:40\"},\n                {\"Date_Time\": \"03/14/2010  08:20:40\"},\n                {\"Date_Time\": \"03/21/2010  08:20:40\"}],\n \"target\":[1509634,1581344, 1614204, 1897725, 1759063,1320022, 1559063, 1659063, 1859063, 1551083, 1819012, 1801029]}\n"
+                "value": "{\"data\":[{\"Date_Time\": \"01/03/2010  08:20:40\" },\n                {\"Date_Time\": \"01/10/2010  08:20:40\"},\n                {\"Date_Time\": \"01/17/2010  08:20:40\"},\n                {\"Date_Time\": \"01/24/2010  08:20:40\"},\n                {\"Date_Time\": \"01/31/2010  08:20:40\"},\n                {\"Date_Time\": \"02/07/2010  08:20:40\"},\n                {\"Date_Time\": \"02/14/2010  08:20:40\"},\n                {\"Date_Time\": \"02/21/2010  08:20:40\"},\n                {\"Date_Time\": \"02/28/2010  08:20:40\"},\n                {\"Date_Time\": \"03/07/2010  08:20:40\"},\n                {\"Date_Time\": \"03/14/2010  08:20:40\"},\n                {\"Date_Time\": \"03/21/2010  08:20:40\"}],\n \"target\":[1509634,1581344, 1614204, 1897725, 1759063,1320022, 1559063, 1659063, 1859063, 1551083, 1819012, 1801029]}\n"
               }
             },
             "locked": null
