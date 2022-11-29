@@ -661,7 +661,6 @@ async def loko_evaluate_service(value, args):
 
 
 
-
 @bp.post("/loko-services/info_obj")
 @doc.tag('loko-services')
 @doc.summary("...")
@@ -761,7 +760,7 @@ async def loko_create_predictor(value, args):
     else:
         transformer = json.loads(transformer)
     predictor_path.mkdir(exist_ok=True, parents=True)
-    predictor_blueprint = dict(id=name,
+    predictor_blueprint = dict(id=predictor_name,
                                description=args.get('description', ''),
                                created_on=time.time() * 1000,
                                # img=request.args.get('img', 'predictor_base'),

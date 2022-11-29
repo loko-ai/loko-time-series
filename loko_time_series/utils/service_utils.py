@@ -54,7 +54,7 @@ def load_params(params):
 
 def train_model(predictor_name, fit_params:dict, data:dict):
     predictor_path = repo_path / 'predictors' / predictor_name
-    print("predictor: ", predictor_path)
+    # print("predictor: ", predictor_path)
     logger.debug(f"predictor{predictor_path}")
     if not check_predictor_existence(predictor_path) or predictor_name=="":
         raise SanicException(f"Predictor '{predictor_name}' doesn't exists", status_code=404)
@@ -149,9 +149,9 @@ def get_model_evaluation(predictor_name, branch, evaluate_params: dict=None, dat
 
     logger.debug("pre-processing evaluation data...")
     # y = FACTORY(body['target'])
-
     data = preprocessing_data(data, datetime_feature=pipeline.datetime_feature,
                                   datetime_frequency=pipeline.datetime_frequency)
+
 
 
     y = data["y"]
