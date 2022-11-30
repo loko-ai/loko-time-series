@@ -3,7 +3,7 @@
   "id": "loko-time-series",
   "description": "",
   "created_on": "14/09/2022, 12:18:07",
-  "last_modify": "29/11/2022, 08:36:52",
+  "last_modify": "30/11/2022, 13:48:36",
   "graphs": {
     "Manage TS": {
       "nodes": [
@@ -1819,8 +1819,8 @@
         {
           "id": "0b110555-0530-4b1b-a3df-53a7437d8432",
           "position": {
-            "x": 1096.4663079956422,
-            "y": 233.79514819544082
+            "x": 552.4663079956422,
+            "y": 257.7951481954408
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2083,16 +2083,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 1096.4663079956422,
-            "y": 233.79514819544082
+            "x": 552.4663079956422,
+            "y": 257.7951481954408
           },
           "__class__": "Node"
         },
         {
           "id": "5539790d-ce77-48b9-9376-c57d8214655d",
           "position": {
-            "x": 488.11989269726564,
-            "y": 222.29745296657808
+            "x": -55.88010730273436,
+            "y": 246.29745296657808
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2192,16 +2192,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 488.11989269726564,
-            "y": 222.29745296657808
+            "x": -55.88010730273436,
+            "y": 246.29745296657808
           },
           "__class__": "Node"
         },
         {
           "id": "48b91ff4-c5f4-47e0-8331-5927697d6b36",
           "position": {
-            "x": 810.428873665449,
-            "y": 235.3004679100369
+            "x": 266.42887366544903,
+            "y": 259.3004679100369
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2269,16 +2269,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 810.428873665449,
-            "y": 235.3004679100369
+            "x": 266.42887366544903,
+            "y": 259.3004679100369
           },
           "__class__": "Node"
         },
         {
           "id": "651c50b4-424f-4514-85a2-45de84788ce6",
           "position": {
-            "x": 435.5053372835882,
-            "y": 169.96765463627213
+            "x": -80.49466271641182,
+            "y": 201.96765463627213
           },
           "type": "comment",
           "dragHandle": "#commentHandle",
@@ -2298,16 +2298,16 @@
           "selectable": false,
           "connectable": false,
           "positionAbsolute": {
-            "x": 435.5053372835882,
-            "y": 169.96765463627213
+            "x": -80.49466271641182,
+            "y": 201.96765463627213
           },
           "__class__": "Node"
         },
         {
           "id": "b8b2743b-9935-4d6c-b4b2-3fb94c6f3f56",
           "position": {
-            "x": 1214.9341058940217,
-            "y": -4.694074892538133
+            "x": 540.9341058940217,
+            "y": -50.69407489253814
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2570,16 +2570,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 1214.9341058940217,
-            "y": -4.694074892538133
+            "x": 540.9341058940217,
+            "y": -50.69407489253814
           },
           "__class__": "Node"
         },
         {
           "id": "21545f82-3de3-4e33-90f9-223e3b400dd2",
           "position": {
-            "x": 472.3126323799505,
-            "y": -26.43508466262896
+            "x": -55.687367620049486,
+            "y": -74.43508466262895
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2679,16 +2679,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 472.3126323799505,
-            "y": -26.43508466262896
+            "x": -55.687367620049486,
+            "y": -74.43508466262895
           },
           "__class__": "Node"
         },
         {
           "id": "adf2e5ec-8e67-414d-9c2e-5c104f0713ce",
           "position": {
-            "x": 768.3697509697122,
-            "y": -4.287403795870569
+            "x": 240.3697509697122,
+            "y": -56.287403795870574
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -2756,37 +2756,37 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 768.3697509697122,
-            "y": -4.287403795870569
+            "x": 240.3697509697122,
+            "y": -56.287403795870574
           },
           "__class__": "Node"
         },
         {
           "id": "e6aab882-5e40-4e3b-ad29-4acda4be9d6f",
           "position": {
-            "x": 422.5013115026458,
-            "y": -67.1199511835204
+            "x": -83.49868849735418,
+            "y": -113.11995118352041
           },
           "type": "comment",
           "dragHandle": "#commentHandle",
           "sourcePosition": "right",
           "targetPosition": "left",
-          "width": 961.0662157681772,
-          "height": 175,
+          "width": 839.0662157681772,
+          "height": 182,
           "selected": false,
           "dragging": false,
           "data": {
             "comment": "Save train dataset",
             "fill": "#577590",
-            "height": 175,
-            "width": 961.0662157681772
+            "height": 182,
+            "width": 839.0662157681772
           },
           "zIndex": -1,
           "selectable": false,
           "connectable": false,
           "positionAbsolute": {
-            "x": 422.5013115026458,
-            "y": -67.1199511835204
+            "x": -83.49868849735418,
+            "y": -113.11995118352041
           },
           "__class__": "Node"
         },
@@ -3460,7 +3460,8 @@
                 "report": true,
                 "forecasting_horizon": "1",
                 "save_eval_report": false,
-                "test_size": "0.2"
+                "test_size": "0.2",
+                "predictor_name": "delhi_temp3"
               }
             },
             "locked": null
@@ -3476,8 +3477,8 @@
         {
           "id": "ea98981c-639a-4ac1-9daf-a0f9c0cf5f1c",
           "position": {
-            "x": 3033,
-            "y": -426
+            "x": 1465,
+            "y": 128
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -3754,16 +3755,13 @@
                 "comment": "",
                 "alias": "",
                 "debug": true,
-                "predictor_name": "delhi_temp",
+                "predictor_name": "delhi_temp3",
                 "description": "Daily climate temperature in Dehli",
                 "existing_transf": false,
                 "existing_model": false,
                 "info_obj": "",
-                "transformer_bp": "{\n  \"__klass__\": \"sktime.transformations.compose.TransformerPipeline\",\n  \"steps\": [\n    {\n      \"__klass__\": \"sktime.transformations.series.detrend.Deseasonalizer\",\n      \"sp\": 12\n   }\n  ]\n}",
-                "model_bp": "{\"__klass__\": \"sktime.forecasting.naive.NaiveForecaster\", \"strategy\": \"mean\"}\n\n",
-                "del_transformer": "",
-                "del_predictor": "",
-                "del_model": ""
+                "transformer_bp": "{\n  \"__klass__\": \"sktime.transformations.compose.TransformerPipeline\",\n  \"steps\": [\n  {\n      \"__klass__\": \"sktime.transformations.series.detrend.Deseasonalizer\",\n      \"sp\": 4,\n      \"model\": \"additive\"\n    },\n    {\n      \"__klass__\": \"sktime.transformations.series.detrend.Detrender\"\n    }\n   ]\n}",
+                "model_bp": "{\"__klass__\": \"sktime.forecasting.arima.AutoARIMA\",\n \"maxiter\":2500,\n \"sp\": 4,\n \"random\":true,\n \"stationary\":true,\n \"seasonal\":true,\n \"n_fits\":100\n}\n\n"
               }
             },
             "locked": null
@@ -3771,16 +3769,16 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 3033,
-            "y": -426
+            "x": 1465,
+            "y": 128
           },
           "__class__": "Node"
         },
         {
           "id": "7347f12e-1e0f-4677-812a-a98806f68243",
           "position": {
-            "x": 2717,
-            "y": -414
+            "x": 1189,
+            "y": 100
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -3856,6 +3854,9 @@
               "click": "Send message",
               "icon": "RiPlayFill",
               "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
                 "type": "String",
                 "value": "Hello world!"
               }
@@ -3865,8 +3866,8 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 2717,
-            "y": -414
+            "x": 1189,
+            "y": 100
           },
           "__class__": "Node"
         },
@@ -4047,26 +4048,30 @@
         {
           "id": "74cf942f-e593-4d23-86db-adf36b5a3980",
           "position": {
-            "x": 2677,
-            "y": -466
+            "x": 1113,
+            "y": 56
           },
           "type": "comment",
           "dragHandle": "#commentHandle",
           "sourcePosition": "right",
           "targetPosition": "left",
           "width": 612,
-          "height": 142,
+          "height": 282,
           "selected": false,
           "dragging": false,
           "data": {
             "comment": "Creating TS model",
             "fill": "#43AA8B",
-            "height": 142,
+            "height": 282,
             "width": 612
           },
           "zIndex": -1,
           "selectable": false,
           "connectable": false,
+          "positionAbsolute": {
+            "x": 1113,
+            "y": 56
+          },
           "__class__": "Node"
         },
         {
@@ -4939,7 +4944,7 @@
                 "forecasting_horizon": "1",
                 "save_eval_report": false,
                 "test_size": "0.2",
-                "predictor_name": "delhi_temp"
+                "predictor_name": "delhi_temp3"
               }
             },
             "locked": null
