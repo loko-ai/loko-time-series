@@ -3,7 +3,7 @@
   "id": "loko-time-series",
   "description": "",
   "created_on": "14/09/2022, 12:18:07",
-  "last_modify": "30/11/2022, 13:48:36",
+  "last_modify": "30/11/2022, 14:51:17",
   "graphs": {
     "Manage TS": {
       "nodes": [
@@ -3461,7 +3461,7 @@
                 "forecasting_horizon": "1",
                 "save_eval_report": false,
                 "test_size": "0.2",
-                "predictor_name": "delhi_temp3"
+                "predictor_name": "delhi_temperature"
               }
             },
             "locked": null
@@ -3755,13 +3755,16 @@
                 "comment": "",
                 "alias": "",
                 "debug": true,
-                "predictor_name": "delhi_temp3",
+                "predictor_name": "delhi_temperature",
                 "description": "Daily climate temperature in Dehli",
                 "existing_transf": false,
                 "existing_model": false,
                 "info_obj": "",
                 "transformer_bp": "{\n  \"__klass__\": \"sktime.transformations.compose.TransformerPipeline\",\n  \"steps\": [\n  {\n      \"__klass__\": \"sktime.transformations.series.detrend.Deseasonalizer\",\n      \"sp\": 4,\n      \"model\": \"additive\"\n    },\n    {\n      \"__klass__\": \"sktime.transformations.series.detrend.Detrender\"\n    }\n   ]\n}",
-                "model_bp": "{\"__klass__\": \"sktime.forecasting.arima.AutoARIMA\",\n \"maxiter\":2500,\n \"sp\": 4,\n \"random\":true,\n \"stationary\":true,\n \"seasonal\":true,\n \"n_fits\":100\n}\n\n"
+                "model_bp": "{\n  \"__klass__\": \"sktime.forecasting.arima.ARIMA\",\n  \"maxiter\": 1500,\n  \"seasonal_order\": [\n    0,\n    1,\n    0,\n    4\n  ],\n  \"suppress_warnings\": true\n}\n",
+                "del_transformer": "",
+                "del_model": "",
+                "del_predictor": ""
               }
             },
             "locked": null
@@ -4048,29 +4051,29 @@
         {
           "id": "74cf942f-e593-4d23-86db-adf36b5a3980",
           "position": {
-            "x": 1113,
-            "y": 56
+            "x": 1134.9347133136398,
+            "y": 37.72107223863361
           },
           "type": "comment",
           "dragHandle": "#commentHandle",
           "sourcePosition": "right",
           "targetPosition": "left",
           "width": 612,
-          "height": 282,
+          "height": 214,
           "selected": false,
           "dragging": false,
           "data": {
             "comment": "Creating TS model",
             "fill": "#43AA8B",
-            "height": 282,
+            "height": 214,
             "width": 612
           },
           "zIndex": -1,
           "selectable": false,
           "connectable": false,
           "positionAbsolute": {
-            "x": 1113,
-            "y": 56
+            "x": 1134.9347133136398,
+            "y": 37.72107223863361
           },
           "__class__": "Node"
         },
@@ -4944,7 +4947,7 @@
                 "forecasting_horizon": "1",
                 "save_eval_report": false,
                 "test_size": "0.2",
-                "predictor_name": "delhi_temp3"
+                "predictor_name": "delhi_temperature"
               }
             },
             "locked": null
