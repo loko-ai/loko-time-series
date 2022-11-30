@@ -275,6 +275,7 @@ class FileSystemVC(VersionControl):
 
 
 def save_pipeline(pipeline, branch, history_limit, repo_path, dao=None):
+    logger.debug(f"saving {pipeline.id} pipeline...")
     path = repo_path / "predictors" / pipeline.id
     fsvc = FileSystemVC(path, history_limit) if not dao else dao(path)
     if branch in fsvc.branches:

@@ -15,7 +15,6 @@ from loko_time_series.dao.fs_dao import JSONFSDAO
 from loko_time_series.utils.core_utils import save_pipeline, to_dataframe
 from loko_time_series.utils.factory_utils import get_factory
 from loko_time_series.utils.logger_utils import logger
-from loko_time_series.utils.serialization_utils import serialize
 
 repo_path = Path(REPO_PATH)
 

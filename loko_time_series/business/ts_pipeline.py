@@ -77,7 +77,7 @@ class TSPipeline():
     def predict(self, X=None, horizon: Union[int, list, pd.PeriodIndex] = None, h_is_relative: bool=True, **kwargs):
         logger.debug('PREDICT')
         logger.debug(f"XXXXXXXXXXXXXXXXX {X}")
-        logger.debug(f"X rows {len(X)}")
+        # logger.debug(f"X rows {len(X)}")
         # logger.debug('X size: %s' % str(X.shape))
         for name, obj in self.steps:
             if name == 'transformer':
@@ -127,9 +127,11 @@ class TSPipeline():
         # horizon =
         if not isinstance(X, pd.DataFrame):
             horizon = y.index
+            print(f'Horizon {horizon}')
 
         else:
             horizon = X.index
+
         logger.debug(f"horizon:: {horizon}")
 
         y_pred = self.predict(X=X, horizon=horizon, h_is_relative=False)

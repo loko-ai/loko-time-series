@@ -5,6 +5,7 @@
   "group": "Custom",
   "icon": "RiFundsBoxFill",
   "click": null,
+  "events": null,
   "configured": false,
   "inputs": [
    {
@@ -49,15 +50,16 @@
    "args": [
     {
      "name": "predictor_name",
-     "type": "text",
+     "type": "asyncSelect",
      "label": "Predictor Name",
-     "helper": "Digit the name of the predictor you want to use",
+     "helper": "Select the name of the predictor you want to use",
      "group": "",
      "value": null,
      "description": "",
      "validation": {
       "required": "Required field"
-     }
+     },
+     "url": "http://localhost:9999/routes/loko-time-series/predictors"
     },
     {
      "name": "datetime_feature",
@@ -112,6 +114,7 @@
      "condition": "{parent}===true",
      "dynamicType": "number",
      "options": null,
+     "fields": null,
      "url": null
     },
     {
@@ -147,6 +150,7 @@
      "condition": "{parent}===true",
      "dynamicType": "text",
      "options": null,
+     "fields": null,
      "url": null
     }
    ]
@@ -158,6 +162,7 @@
   "group": "Custom",
   "icon": "RiCheckboxBlankCircleFill",
   "click": null,
+  "events": null,
   "configured": true,
   "inputs": [
    {
@@ -213,7 +218,8 @@
       "load_from_ucr_tsv_to_dataframe",
       "load_tsf_to_dataframe",
       "load_unit_test_tsf",
-      "load_solar"
+      "load_solar",
+      "load_covid_3month"
      ]
     }
    ]
@@ -225,25 +231,26 @@
   "group": "Custom",
   "icon": "RiFileSettingsFill",
   "click": null,
+  "events": null,
   "configured": true,
   "inputs": [
    {
     "id": "create",
     "label": "create_predictor",
-    "service": "",
-    "to": "create_predictor"
+    "service": "loko-services/create_predictor",
+    "to": "create"
    },
    {
     "id": "delete",
     "label": "delete_predictor",
-    "service": "",
-    "to": "delete_predictor"
+    "service": "loko-services/delete_objs",
+    "to": "delete"
    },
    {
     "id": "info",
     "label": "info_predictor",
-    "service": "loko-services/info",
-    "to": "info_predictor"
+    "service": "loko-services/info_obj",
+    "to": "info"
    }
   ],
   "outputs": [
@@ -267,6 +274,26 @@
    },
    "args": [
     {
+     "name": "predictor_name",
+     "type": "text",
+     "label": "Predictor",
+     "helper": "Choose the name you want to use for your predictor",
+     "group": "Create Parameters",
+     "value": null,
+     "description": "",
+     "validation": null
+    },
+    {
+     "name": "description",
+     "type": "area",
+     "label": "Description",
+     "helper": "Add a description for your predictor, if you want",
+     "group": "Create Parameters",
+     "value": null,
+     "description": "",
+     "validation": null
+    },
+    {
      "name": "existing_transf",
      "type": "boolean",
      "label": "Use existing transformer",
@@ -277,7 +304,7 @@
      "validation": null
     },
     {
-     "name": "transformer_name",
+     "name": "transformer_id",
      "type": "dynamic",
      "label": "Transformer",
      "helper": "",
@@ -289,10 +316,11 @@
      "condition": "{parent}===true",
      "dynamicType": "asyncSelect",
      "options": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/transformers"
+     "fields": null,
+     "url": "http://localhost:9999/routes/loko-time-series/transformers"
     },
     {
-     "name": "transformer_def",
+     "name": "transformer_bp",
      "type": "dynamic",
      "label": "Transformer",
      "helper": "",
@@ -304,6 +332,7 @@
      "condition": "{parent}===false",
      "dynamicType": "area",
      "options": null,
+     "fields": null,
      "url": null
     },
     {
@@ -317,7 +346,7 @@
      "validation": null
     },
     {
-     "name": "model_name",
+     "name": "model_id",
      "type": "dynamic",
      "label": "Model",
      "helper": "",
@@ -329,10 +358,11 @@
      "condition": "{parent}===true",
      "dynamicType": "asyncSelect",
      "options": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/models"
+     "fields": null,
+     "url": "http://localhost:9999/routes/loko-time-series/models"
     },
     {
-     "name": "model_def",
+     "name": "model_bp",
      "type": "dynamic",
      "label": "Model",
      "helper": "",
@@ -344,6 +374,7 @@
      "condition": "{parent}===false",
      "dynamicType": "area",
      "options": null,
+     "fields": null,
      "url": null
     },
     {
@@ -355,7 +386,7 @@
      "value": null,
      "description": "",
      "validation": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/transformers"
+     "url": "http://localhost:9999/routes/loko-time-series/transformers"
     },
     {
      "name": "del_model",
@@ -366,7 +397,7 @@
      "value": null,
      "description": "",
      "validation": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/models"
+     "url": "http://localhost:9999/routes/loko-time-series/models"
     },
     {
      "name": "del_predictor",
@@ -377,7 +408,7 @@
      "value": null,
      "description": "",
      "validation": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/predictors"
+     "url": "http://localhost:9999/routes/loko-time-series/predictors"
     },
     {
      "name": "info_obj",
@@ -395,7 +426,7 @@
      ]
     },
     {
-     "name": "obj_name",
+     "name": "info_obj_name",
      "type": "dynamic",
      "label": "Predictor",
      "helper": "",
@@ -407,10 +438,11 @@
      "condition": "{parent}===\"Predictor\"",
      "dynamicType": "asyncSelect",
      "options": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/predictors"
+     "fields": null,
+     "url": "http://localhost:9999/routes/loko-time-series/predictors"
     },
     {
-     "name": "obj_name",
+     "name": "info_obj_name",
      "type": "dynamic",
      "label": "Model",
      "helper": "",
@@ -422,10 +454,11 @@
      "condition": "{parent}===\"Model\"",
      "dynamicType": "asyncSelect",
      "options": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/models"
+     "fields": null,
+     "url": "http://localhost:9999/routes/loko-time-series/models"
     },
     {
-     "name": "obj_name",
+     "name": "info_obj_name",
      "type": "dynamic",
      "label": "Transformer",
      "helper": "",
@@ -437,7 +470,8 @@
      "condition": "{parent}===\"Transformer\"",
      "dynamicType": "asyncSelect",
      "options": null,
-     "url": "http://localhost:9999/routes/ds4biz-time-series/transformers"
+     "fields": null,
+     "url": "http://localhost:9999/routes/loko-time-series/transformers"
     }
    ]
   }

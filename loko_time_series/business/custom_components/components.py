@@ -1,4 +1,5 @@
-from loko_extensions.model.components import Component, Input, Output, save_extensions, Select, Arg, Dynamic
+from loko_extensions.model.components import Component, Input, Output, save_extensions, Select, Arg, Dynamic, \
+    AsyncSelect
 
 predict_service = "loko-services/predictors/predict"
 fit_service = "loko-services/predictors/fit"
@@ -12,9 +13,10 @@ evaluate_service = "loko-services/predictors/evaluate"
 
 
 ################### TIME SERIES    ########################################
+predictor_list_service = "http://localhost:9999/routes/loko-time-series/predictors"
 
-pred_name = Arg(name="predictor_name", label="Predictor Name", type="text",
-                helper="Digit the name of the predictor you want to use", required=True)
+pred_name = AsyncSelect(name="predictor_name", label="Predictor Name", url=predictor_list_service,
+                helper="Select the name of the predictor you want to use", required=True)
 #### FIT ARGS
 
 fit_group = "Fit Parameters"
